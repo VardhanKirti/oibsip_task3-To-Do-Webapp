@@ -1,0 +1,121 @@
+:root{
+    --dark:#111827;
+    --gray:#2f363e;
+    --green:#98fb98;
+    --spring-green:#00ff7f;
+    --light-dark:#242124;
+    --cyan:#00FFFF;
+    --pink:#EC4899;
+    --purple:#8B5Cf6;
+}
+
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0;
+}
+
+body{
+    display:flex;
+   
+  
+    min-height: 100vh;
+    background: var(--dark);
+    color:#fff;
+    justify-content: center;
+}
+
+header h1{
+    font-size: 40px;
+    width: 100%;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container{
+    position:relative;
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    background: var(--gray);
+    padding: 30px 50px;
+   
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),10px 10px 70px rgba(0, 0, 0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0, 0, 0,0.75);
+}
+
+#input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0,0.25),inset 2px 2px 5px rgba(0,0,0,0.5),inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+
+header h1{
+    margin-bottom: 25px;
+}
+
+.container li{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 15px;
+    padding:10px 10px 10px 45px;
+    min-height: 45px;
+    background: var(--spring-green);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0,0.25),inset 2px 2px 5px rgba(0,0,0,0.5),inset -3px -3px 5px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    color: var(--dark);
+}
+
+.container li.done{
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    
+   
+    transition:0.5s;
+}
+
+.container li i{
+   position: absolute;
+   right: -40px;
+   width: 30px;
+   height: 30px;
+   
+   background: var(--cyan);
+   border-radius: 50%;
+   box-shadow: 5px 5px 7px rgba(0, 0, 0,0.25),inset 2px 2px 5px rgba(255,255,255,0.25),inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+
+
+
+.container li::before{
+  content: '';
+  position: absolute;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  background: var(--gray);
+  border-radius: 50%;
+}
+
+.container li.done:after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(315deg);
+  }
